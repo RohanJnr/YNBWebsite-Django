@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    opacity: 0;
+    line-height: 3rem;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Balsamiq Sans', cursive;
+    color: black;
+
+}
+h1, h2, h3, h4, h5, h6{
+    color: red;
+    font-family: 'Kaushan Script', cursive;
+}
+
+a{
+    text-decoration: none;
+}
+nav{
+    background-color: #e3f2fd;
+    font-size: 22px;
+}
+.nav-link:hover{
+    color: white !important;
+    background: #000;
+}
+.navbar-brand{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 31px;
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:25px 25%;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  text-align: center;
+  height: 100%;
+}
+footer .links{
+    font-size: 30px;
+}
+
+footer .links i{
+    color: lightblue;
+    margin: 10px;
+    transition-duration: 1s;
+}
+
+footer .links i:hover{
+    transform: scale(1.5);
+}
+
+footer hr{
+    background-color: rgb(51, 51, 51);
+}
+a:hover{
+    text-decoration: none;
+}
+main {
+    color: orange;
+    font-weight: bold;
+    /* background: url("../images/creeper.jpg"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8%;
+    min-height: 100vh;
+    font-family: 'Kaushan Script', cursive;
+}
+main .container{
+    display: grid;
+    grid-template-columns: fr 1fr;
+}
+
+main h1{
+    font-size: 80px;
+    color: red;
+}
+main h2{
+    color: orange;
+}
+
+.invite-btn{
+    overflow: hidden;
+    max-width:20em;
+    font-family: 'Kaushan Script', cursive;
+    background: black;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    border-color:rgb(77, 75, 75);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+.fa-discord{
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+.invite-btn:hover{
+    background: rgb(27, 27, 27);
+}
+.about h2{
+    color: red;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+.about p{
+    color: rgb(70, 70, 70);
+    font-size: 20px;
+    margin-left: 30px;
+    padding-left: 25px;
+    border-left: rgb(214, 214, 214) 1px solid;
+}

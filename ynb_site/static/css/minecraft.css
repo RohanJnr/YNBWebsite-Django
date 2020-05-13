@@ -1,0 +1,47 @@
+.mc-server{
+    color: rgb(70, 70, 70);
+    padding: 5%;
+    font-weight: 300;
+}
+
+.inner-container{
+    margin-left: 30px;
+    padding-left: 25px;
+    border-left: rgb(214, 214, 214) 1px solid;
+}
+.inner-container hr{
+    background-color: brown;
+}
+.server-name{
+    font-size: 60px;
+    padding: 20px 0;
+}
+.mc-server p{
+    font-size: 20px;
+}
+.server-details{
+    padding: 4% 0;
+}
+
+.server-details ul{
+    padding-left: 5%;
+    font-size: 20px;
+}
+.server-details ul a{
+    color: orange;
+}
+
+.s-detail p{
+    padding: 15px;
+}
+
+.points{
+    padding-left: 60px;
+}
+.detail-title{
+    color: orangered;
+    font-size: 20px;
+}
+li{
+    margin: 10px;
+}
