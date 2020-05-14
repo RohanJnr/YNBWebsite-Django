@@ -20,13 +20,16 @@
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 			<li class="nav-item active">
-			  <a class="nav-link" href="#">Gallery <span class="sr-only">(current)</span></a>
+			  <a class="nav-link" href="#"><i class="fas fa-images"></i>Gallery <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item active nav-mc">
+				<a class="nav-link" href="{% url 'all_mc_servers' %}"><img height="27px" width="auto" src="{% static 'images/minecraft_grass_block.png' %}" alt="">Minecraft <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="{% url 'all_mc_servers' %}">Minecraft <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="#"><i class="fas fa-calendar-check"></i>Events <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Don't Starve <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="https://www.patreon.com/youneedbackup"><i class="fab fa-patreon"></i>Patreon <span class="sr-only">(current)</span></a>
 			</li>
 		  </ul>
 		  

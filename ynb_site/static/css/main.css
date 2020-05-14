@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 *{
@@ -32,6 +31,9 @@ a{
 nav{
     background-color: #e3f2fd;
     font-size: 22px;
+}
+.nav-link{
+    padding: 5px;
 }
 .nav-link:hover{
     color: white !important;
@@ -84,9 +86,25 @@ main {
 }
 main .container{
     display: grid;
-    grid-template-columns: fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
-
+main iframe{
+    border: rgb(214, 214, 214) 1px solid;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+@media (max-width: 1100px) {
+    main .container {
+        padding: 0;
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    main iframe{
+        margin-top: 20px;
+        margin-left: 0;
+        max-width: 100%;
+    }
+  }
 main h1{
     font-size: 80px;
     color: red;
@@ -112,18 +130,26 @@ main h2{
     padding: 5px;
 }
 .invite-btn:hover{
-    background: rgb(27, 27, 27);
+    color: orange;
+}
+.about{
+    text-align: center;
+    padding: 3%;
 }
 .about h2{
-    color: red;
+    color: orangered;
     font-family: 'Kaushan Script', cursive;
-    font-size: 60px;
-    padding-bottom: 10px;
+    font-size: 50px;
+}
+.flip-image{
+    transform: rotateY(180deg);
+}
+.party-poppers-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .about p{
-    color: rgb(70, 70, 70);
-    font-size: 20px;
-    margin-left: 30px;
-    padding-left: 25px;
-    border-left: rgb(214, 214, 214) 1px solid;
+    padding: 10px 20%;
+    font-size: 25px;
 }

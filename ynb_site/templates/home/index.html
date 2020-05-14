@@ -4,24 +4,41 @@
 
 <main>
     <div class="container">
-        <div class="intro">
-            <h1>You Need Backup</h1>
-            <h2>An international multi branch community for gaming & socializing.</h2>
-            <br>
+        <div>  
+            <div class="intro">
+                <h1>You Need Backup</h1>
+                <h2>An international multi branch community for gaming & socializing.</h2>
+                <br>
+            </div>
+            <div>
+                <a href="">
+                    <button class="invite-btn">
+                        <i class="fab fa-discord"></i>
+                        Join Us On Discord
+                    </button>
+                </a>
+            </div>
         </div>
         <div>
-            <a href="">
-                <button class="invite-btn">
-                    <i class="fab fa-discord"></i>
-                    Join Us On Discord
-                    <img src="{% static 'images/ynb-logo.png' %}" height="45px" width="45px" alt="">
-                </button>
-            </a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oJHlzhGmZTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </main>
-<section class="about container" id="about">
-    <h2>About Us</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae delectus deserunt facilis facere tempore, illo repellat sed minima quasi quo culpa totam tenetur fugiat inventore necessitatibus voluptate ipsum. Explicabo, iste!Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel nibh eleifend, fringilla nulla a, sagittis erat. Donec maximus velit non dui condimentum, eget convallis diam luctus. Cras non iaculis ipsum. Vivamus non placerat velit. Nulla imperdiet euismod ante, sed lacinia nulla pellentesque quis. Sed vulputate nunc vitae consectetur aliquam. Curabitur ac nibh ut orci ullamcorper placerat non sit amet est. Maecenas eu massa sit amet neque vehicula accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+<section class="about">
+    <div class="party-poppers-div">
+        <div>
+            <img src="{% static 'images/party-popper.png' %}" alt="">
+        </div>
+        <h2>4 Years of Togetherness !!</h2>
+        <div>
+            <img src="{% static 'images/party-popper.png' %}" class="flip-image" alt="">
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'images/cake.png' %}" alt="">
+    </div>
+    <div>
+        <p>Started as an empty Unturned clan Discord for 6 users, now it's a community with plently of incredible people !!</p>
+    </div>
 </section>
 {% endblock %}

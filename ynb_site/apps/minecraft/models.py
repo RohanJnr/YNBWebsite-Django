@@ -9,7 +9,7 @@ SERVER_TYPES = (
 )
 
 class McServer(models.Model):
-    """Model for minecraft survival server."""
+    """Model for a minecraft server."""
     name = models.CharField(max_length=200, unique=True)
     founded_on = models.DateField()
     gamemode = models.CharField(max_length=200, choices=SERVER_TYPES, default="survival")
