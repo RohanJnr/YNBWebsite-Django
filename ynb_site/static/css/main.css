@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 *{
     padding: 0;
@@ -13,10 +14,8 @@ body{
     line-height: 3rem;
     transition: opacity 2s;
     -webkit-transition: opacity 2s; /* Safari */
-    background: #abbaab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: 'Balsamiq Sans', cursive;
+    background: linear-gradient(to right, #ffffff, #abbaab); 
+    font-family: 'Roboto', sans-serif;
     color: black;
 
 }
@@ -28,20 +27,20 @@ h1, h2, h3, h4, h5, h6{
 a{
     text-decoration: none;
 }
-nav{
-    background-color: #e3f2fd;
-    font-size: 22px;
+nav a{
+    font-size: 20px;
+    color: rgb(226, 226, 226) !important;
+    margin: 0;
+    padding: 0;
 }
 .nav-link{
     padding: 5px;
 }
 .nav-link:hover{
-    color: white !important;
     background: #000;
 }
-.navbar-brand{
-    font-family: 'Kaushan Script', cursive;
-    font-size: 31px;
+.navbar-text i{
+    font-size: 30px;
 }
 .site-footer
 {
@@ -76,12 +75,11 @@ a:hover{
 main {
     color: orange;
     font-weight: bold;
-    /* background: url("../images/creeper.jpg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 8%;
-    min-height: 100vh;
+    padding: 4%;
+    height: 90vh;
     font-family: 'Kaushan Script', cursive;
 }
 main .container{
@@ -93,24 +91,16 @@ main iframe{
     border-radius: 5px;
     margin-left: 20px;
 }
-@media (max-width: 1100px) {
-    main .container {
-        padding: 0;
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-    main iframe{
-        margin-top: 20px;
-        margin-left: 0;
-        max-width: 100%;
-    }
-  }
+
 main h1{
     font-size: 80px;
     color: red;
 }
 main h2{
     color: orange;
+}
+main .landing-page-img{
+    padding-left: 100px;
 }
 
 .invite-btn{
@@ -132,9 +122,16 @@ main h2{
 .invite-btn:hover{
     color: orange;
 }
-.about{
+section{
     text-align: center;
-    padding: 3%;
+    color: white;
+    padding: 3% 5%;
+}
+.about{
+    background: url("../images/minecraft_background3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 .about h2{
     color: orangered;
@@ -149,7 +146,42 @@ main h2{
     align-items: center;
     justify-content: center;
 }
-.about p{
+section p{
+    margin: 10px;
     padding: 10px 20%;
     font-size: 25px;
 }
+.offering h2{
+    color: orangered;
+    font-size: 50px;
+}
+.offering p{
+    color: black;
+}
+.dolphin{
+    margin-left: 60px;
+    position: absolute;
+}
+
+@media (max-width: 1100px) {
+    main .container {
+        padding: 0;
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    main iframe{
+        margin-top: 20px;
+        margin-left: 0;
+        max-width: 100%;
+    }
+    main .landing-page-img{
+        padding-left: 0;
+    }
+    section p{
+        padding: 0;
+        max-width: 100%;
+    }
+    .dolphin{
+        display: none;
+    }
+  }

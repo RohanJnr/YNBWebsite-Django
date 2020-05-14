@@ -7,14 +7,20 @@
 
 <div class="container mc-server">
     <h1 class="server-name">{{ server.name }}</h1>
+    
     <div class="inner-container">
-        <span class="text-muted">Created on: {{ server.founded_on }}</span>
-        <br>
-        <span class="text-muted">Gamemode: {{ server.gamemode.capitalize }}</span>
-        <br>
-        <br>
-        <p>{{ server.description }}</p>
-
+        <div class="creeper-div">
+            <div>
+                <span class="text-muted">Created on: {{ server.founded_on }}</span>
+                <br>
+                <span class="text-muted">Gamemode: {{ server.gamemode.capitalize }}</span>
+                <br>
+                <p>{{ server.description }}</p>
+            </div>
+            <div class="creeper-pic">
+                <img src="{% static 'images/creeper.png' %}" height="300px" width="auto" alt="">
+            </div>
+        </div>
         <div class="server-details">
             <h3>Server Details: </h3>
             <ul>
