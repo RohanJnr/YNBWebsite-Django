@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "ynb_site.apps.gallery",
     "ynb_site.apps.home",
     "ynb_site.apps.minecraft",
     'django.contrib.admin',
@@ -123,3 +124,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "ynb_site", "static")
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "ynb_site", "media")
+MEDIA_URL = "/media/"

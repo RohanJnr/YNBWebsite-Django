@@ -6,12 +6,12 @@
     <div class="container">
         <div>  
             <div class="intro">
-                <h1>You Need Backup</h1>
-                <h2>An international multi branch community for gaming & socializing.</h2>
+                <h1>{{ landing_text.title }}</h1>
+                <h2>{{ landing_text.description }}</h2>
                 <br>
             </div>
             <div>
-                <a href="">
+                <a href="https://discord.gg/Ft4nrUA">
                     <button class="invite-btn">
                         <i class="fab fa-discord"></i>
                         Join Us On Discord
@@ -20,16 +20,20 @@
             </div>
         </div>
         <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oJHlzhGmZTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://discordapp.com/widget?id=170334240490127367&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
         </div>
+
     </div>
 </main>
 <section class="about">
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oJHlzhGmZTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div class="party-poppers-div">
         <div>
             <img src="{% static 'images/party-popper.png' %}" alt="">
         </div>
-        <h2>4 Years of Togetherness !!</h2>
+        <h2>{{ section_1.title }}</h2>
         <div>
             <img src="{% static 'images/party-popper.png' %}" class="flip-image" alt="">
         </div>
@@ -38,18 +42,18 @@
         <img src="{% static 'images/bear_ynb.png' %}" height="250px" width="auto" alt="">
     </div>
     <div>
-        <p>Started as an empty Unturned clan Discord for 6 users, now it's a community with plently of incredible people !!</p>
+        <p>{{ section_1.description }}</p>
     </div>
 </section>
 <div class="dolphin">
     <img src="{% static 'images/dolphin.png' %}" alt="">
 </div>
 <section class="offering">
-    <h2>What do we offer?</h2>
+    <h2>{{ section_2.title }}</h2>
     <div>
         <img src="{% static 'images/mc_png.png' %}" height="200px" width="auto" alt="">
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ex, repellendus ratione odio voluptate in aperiam nam cum, amet consectetur quasi dicta natus molestias, odit accusantium ad praesentium rerum adipisci?</p>
-    <button class="invite-btn">Join Us</button>
+    <p>{{ section_2.description }}</p>
+    <a href="https://discord.gg/Ft4nrUA"><button class="invite-btn">Join Us</button></a>
 </section>
 {% endblock %}

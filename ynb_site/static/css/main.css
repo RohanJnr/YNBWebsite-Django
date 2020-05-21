@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
 *{
     padding: 0;
@@ -21,13 +22,14 @@ body{
 }
 h1, h2, h3, h4, h5, h6{
     color: red;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Metal Mania', cursive;
 }
 
 a{
     text-decoration: none;
 }
 nav a{
+    font-weight: bold;
     font-size: 20px;
     color: rgb(226, 226, 226) !important;
     margin: 0;
@@ -44,25 +46,33 @@ nav a{
 }
 .site-footer
 {
-  background-color:#26272b;
-  padding:25px 25%;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
-  text-align: center;
-  height: 100%;
+    position: relative;
+    bottom: 0;
+    font-weight: bold;
+    background-color:#26272b;
+    padding:25px 25%;
+    line-height:24px;
+    color:#737373;
+    text-align: center;
+    height: 100%;
 }
 footer .links{
-    font-size: 30px;
+    font-size: 20px;
 }
-
+footer .links-container{
+    display: flex;
+    justify-content: space-around;
+}
 footer .links i{
-    color: lightblue;
+    font-size: 25px;
+    display: grid;
+    color: white;
     margin: 10px;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 footer .links i:hover{
+    color: silver;
     transform: scale(1.5);
 }
 
@@ -79,16 +89,13 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     padding: 4%;
-    height: 90vh;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Metal Mania', cursive;
 }
 main .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 main iframe{
-    border: rgb(214, 214, 214) 1px solid;
-    border-radius: 5px;
     margin-left: 20px;
 }
 
@@ -106,7 +113,7 @@ main .landing-page-img{
 .invite-btn{
     overflow: hidden;
     max-width:20em;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Metal Mania', cursive;
     background: black;
     color: white;
     padding: 10px;
@@ -127,6 +134,10 @@ section{
     color: white;
     padding: 3% 5%;
 }
+section iframe{
+    border-radius: 5px;
+    border: rgb(44, 44, 44) 1px solid;
+}
 .about{
     background: url("../images/minecraft_background3.jpg");
     background-repeat: no-repeat;
@@ -135,7 +146,6 @@ section{
 }
 .about h2{
     color: orangered;
-    font-family: 'Kaushan Script', cursive;
     font-size: 50px;
 }
 .flip-image{
@@ -162,16 +172,15 @@ section p{
     margin-left: 60px;
     position: absolute;
 }
-
 @media (max-width: 1100px) {
     main .container {
         padding: 0;
         grid-template-columns: 1fr;
         max-width: 100%;
     }
-    main iframe{
+    iframe{
         margin-top: 20px;
-        margin-left: 0;
+        margin-left: 0px !important;
         max-width: 100%;
     }
     main .landing-page-img{
@@ -183,5 +192,12 @@ section p{
     }
     .dolphin{
         display: none;
+    }
+    .about h2{
+        font-size: 35px;
+    }
+    footer .links-container{
+        display: grid;
+        grid-gap: 10px;
     }
   }

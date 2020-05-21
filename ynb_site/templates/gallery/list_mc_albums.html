@@ -1,0 +1,18 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock %}
+{% block body %}
+
+<div class="container list-albums">
+    <h1>Minecraft Albums</h1>
+    <p>The following are the YNB Minecraft Server albums.</p>
+    <ol>
+        {% for album in mc_albums %}
+            <li><a href="{% url 'mc_album' minecraft_server=album %}">{{ album }}</a></li>
+        {% endfor %}
+    </ol>
+</div>
+
+{% endblock %}

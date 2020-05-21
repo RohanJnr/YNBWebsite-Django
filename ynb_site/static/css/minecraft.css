@@ -51,10 +51,11 @@ li{
 }
 
 .list-servers ol{
+    font-weight: bold;
     margin: 30px;
 }
 .list-servers a{
-    color: orange;
+    color: orangered;
 }
 .creeper-div{
     display: grid;

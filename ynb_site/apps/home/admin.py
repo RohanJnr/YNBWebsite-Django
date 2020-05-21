@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Game, LandingPage, HomePageSection
+
+
+admin.site.register(Game)
+admin.site.register(LandingPage)
+admin.site.register(HomePageSection)
