@@ -1,9 +1,11 @@
 import os
 
 from django.db import models
+from django.db.models.signals import post_delete
 from PIL import Image
 
 from ynb_site.apps.minecraft.models import McServer
+from .signals import delete_image
 
 
 class Picture(models.Model):
@@ -18,3 +20,5 @@ class Picture(models.Model):
             output_size = (800, 800)
             image.thumbnail(output_size)
             image.save(self.image.path)
+
+post_delete.connect(delete_image, Picture)
