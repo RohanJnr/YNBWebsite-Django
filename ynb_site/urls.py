@@ -27,6 +27,8 @@ urlpatterns = [
     path("", include("ynb_site.apps.minecraft.urls")),
     path("", include("ynb_site.apps.gallery.urls")),
 ]
-urlpatterns += staticfiles_urlpatterns()
+
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=set tings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += staticfiles_urlpatterns()
