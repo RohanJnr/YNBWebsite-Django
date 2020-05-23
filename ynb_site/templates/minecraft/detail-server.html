@@ -48,7 +48,7 @@
             <p>{{ server.rules_description|markdown }}</p>
             <ul class="points">
                 {% for rule in server.serverrule_set.all %}
-                    <li>{{ rule.rule|markdown }}</li>
+                    <li><span class="detail-title">{{ rule.title }}</span> <br> {{ rule.rule|markdown }}</li>
                 {% endfor %}
             </ul>
         </div>
