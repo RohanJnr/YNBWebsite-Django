@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv("SETTING_DEBUG"))
 
-ALLOWED_HOSTS = ["localhost", os.getenv("SERVER_IP")]
+ALLOWED_HOSTS = ["localhost", os.getenv("SERVER_IP"), "youneedbackup.com", "www.youneedbackup.com"]
 
 
 # Application definition
@@ -120,7 +120,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "ynb_site", "static")

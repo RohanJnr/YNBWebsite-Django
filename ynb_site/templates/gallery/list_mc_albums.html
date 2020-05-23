@@ -6,13 +6,19 @@
 {% block body %}
 
 <div class="container list-albums">
-    <h1>Minecraft Albums</h1>
-    <p>The following are the YNB Minecraft Server albums.</p>
-    <ol>
-        {% for album in mc_albums %}
-            <li><a href="{% url 'mc_album' minecraft_server=album %}">{{ album }}</a></li>
-        {% endfor %}
-    </ol>
+    {% if mc_albums %}
+        <h1>Minecraft Albums</h1>
+        <p>The following are the YNB Minecraft Server albums.</p>
+
+        <ol>
+            {% for album in mc_albums %}
+                <li><a href="{% url 'mc_album' minecraft_server=album %}">{{ album }}</a></li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h3 class="in-progress">Webpage in Progress...</h3>
+        <p>You can visit our <a href="https://imgur.com/a/W34HKVf">Imgur gallery</a> in the mean time.</p>
+    {% endif %}
 </div>
 
 {% endblock %}

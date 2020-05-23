@@ -14,12 +14,6 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
 }
-.image-div{
-  background: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  font-size: 20px;
-}
 .image-div img{
   width: 100%;
   height: auto;
