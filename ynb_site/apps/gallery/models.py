@@ -10,6 +10,7 @@ from .signals import delete_image
 
 class Picture(models.Model):
     minecraft_server = models.ForeignKey(McServer, on_delete=models.CASCADE, default=1)
+    title = models.CharField(max_length=200, null=True, blank=True)
     image = models.ImageField(upload_to="gallery")
 
     def save(self):
