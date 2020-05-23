@@ -10,6 +10,7 @@ django = "*"
 pillow = "*"
 python-dotenv = "*"
 gunicorn = "*"
+django-markdown-deux = "*"
 
 [requires]
 python_version = "3.8"

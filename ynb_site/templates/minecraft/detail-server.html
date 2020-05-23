@@ -1,5 +1,6 @@
 {% extends "home/base.html" %}
 {% load static %}
+{% load markdown_deux_tags %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/minecraft.css' %}">
 {% endblock %}
@@ -15,7 +16,7 @@
                 <br>
                 <span class="text-muted">Gamemode: {{ server.gamemode.capitalize }}</span>
                 <br>
-                <p>{{ server.description }}</p>
+                <p>{{ server.description|markdown }}</p>
             </div>
             <div class="creeper-pic">
                 <img src="{% static 'images/creeper.png' %}" height="300px" width="auto" alt="">
@@ -31,23 +32,23 @@
         </div>
         <div id="howtojoin" class="s-detail">
             <h2>How to join?</h2>
-            <p>{{ server.to_join_info }}</p>
+            <p>{{ server.to_join_info|markdown }}</p>
         </div>
         <div id="features" class="s-detail">
             <h2>Features</h2>
-            <p>{{ server.features_description }}</p>
+            <p>{{ server.features_description|markdown }}</p>
             <ul class="points">
                 {% for feature in server.serverfeature_set.all %}
-                    <li> <span class="detail-title">{{ feature.title }}:</span> <br> {{ feature.feature }}</li>
+                    <li> <span class="detail-title">{{ feature.title|markdown }}:</span> <br> {{ feature.feature|markdown }}</li>
                 {% endfor %}
             </ul>
         </div>
         <div id="rules" class="s-detail">
             <h2>Rules</h2>
-            <p>{{ server.rules_description }}</p>
+            <p>{{ server.rules_description|markdown }}</p>
             <ul class="points">
                 {% for rule in server.serverrule_set.all %}
-                    <li><span class="detail-title">{{ rule.title }}:</span> <br> {{ rule.rule }}</li>
+                    <li><span class="detail-title">{{ rule.title|markdown }}:</span> <br> {{ rule.rule|markdown }}</li>
                 {% endfor %}
             </ul>
         </div>

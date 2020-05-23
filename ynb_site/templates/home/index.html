@@ -1,5 +1,7 @@
 {% extends "home/base.html" %}
 {% load static %}
+{% load markdown_deux_tags %}
+
 {% block body %}
 
 <main>
@@ -53,7 +55,7 @@
     <div>
         <img src="{% static 'images/mc_png.png' %}" height="200px" width="auto" alt="">
     </div>
-    <p>{{ section_2.description }}</p>
+    <p>{{ section_2.description|markdown }}</p>
     <a href="https://discord.gg/Ft4nrUA"><button class="invite-btn">Join Us</button></a>
 </section>
 {% endblock %}
