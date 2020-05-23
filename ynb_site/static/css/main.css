@@ -142,7 +142,7 @@ section iframe{
     background: url("../images/minecraft_background3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom right;
 }
 .about h2{
     color: orangered;
