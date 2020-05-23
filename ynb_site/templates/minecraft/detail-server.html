@@ -39,7 +39,7 @@
             <p>{{ server.features_description|markdown }}</p>
             <ul class="points">
                 {% for feature in server.serverfeature_set.all %}
-                    <li> <span class="detail-title">{{ feature.title|markdown }}:</span> <br> {{ feature.feature|markdown }}</li>
+                    <li> <span class="detail-title">{{ feature.title }}:</span> <br> {{ feature.feature|markdown }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -48,7 +48,7 @@
             <p>{{ server.rules_description|markdown }}</p>
             <ul class="points">
                 {% for rule in server.serverrule_set.all %}
-                    <li><span class="detail-title">{{ rule.title|markdown }}:</span> <br> {{ rule.rule|markdown }}</li>
+                    <li>{{ rule.rule|markdown }}</li>
                 {% endfor %}
             </ul>
         </div>
