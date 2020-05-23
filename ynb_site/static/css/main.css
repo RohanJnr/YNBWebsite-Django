@@ -201,3 +201,11 @@ section p{
         grid-gap: 10px;
     }
   }
+
+.in-progress{
+    padding: 20px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
