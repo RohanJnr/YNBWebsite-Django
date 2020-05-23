@@ -33,16 +33,18 @@
 			<li class="nav-item active">
 				<a class="nav-link" href="https://www.patreon.com/youneedbackup">Patreon <span class="sr-only">(current)</span></a>
 			</li>
-			<li class="nav-item active">
-				<a class="nav-link" href="https://www.youtube.com/channel/UCJjm2A_-hssJLkp0ZQUGIxQ">Youtube <span class="sr-only">(current)</span></a>
-			</li>
 		  </ul>
 		  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 		  </ul>
 		  <ul class="navbar-nav ml-auto">
-			<li class="nav-item">
+			<li class="nav-item right-side discord-logo">
 				<a href="https://discord.gg/Ft4nrUA">
-					<img src="{% static 'images/discord-logo.png' %}" height="50" width="auto" alt="">
+					<img src="{% static 'images/discord-logo.png' %}" height="48" width="55" alt="">
+				</a>
+			</li>
+			<li class="nav-item right-side yt-logo">
+				<a href="https://www.youtube.com/channel/UCJjm2A_-hssJLkp0ZQUGIxQ">
+					<img src="{% static 'images/yt-logo.png' %}" height="55" width="55" alt="">
 				</a>
 			</li>
 		</ul>
@@ -52,33 +54,6 @@
 	{% endblock body %}
 	<footer class="site-footer">
 		<h3>You Need Backup</h3>
-		<p></p>
-		<div class="links-container">
-			<div class="links">
-				Home
-				<a href=""><i class="fas fa-home"></i></a>
-			</div>
-			<div class="links">
-				Gallery
-				<a href="{% url 'gallery' %}"><i class="fas fa-images"></i></a>
-			</div>
-			<div class="links">
-				Minecraft Servers
-				<a href="{% url 'all_mc_servers' %}"><i class="fas fa-server"></i></a>
-			</div>
-			<div class="links">
-				Discord Server
-				<a href="https://discord.gg/Ft4nrUA"><i class="fab fa-discord"></i></a>
-			</div>
-			<div class="links">
-				Patreon
-				<a href="https://www.patreon.com/youneedbackup"><i class="fab fa-patreon"></i></a>
-			</div>
-			<div class="links">
-				Youtube
-				<a href="https://www.youtube.com/channel/UCJjm2A_-hssJLkp0ZQUGIxQ"><i class="fab fa-youtube"></i></a>
-			</div>
-		</div>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
