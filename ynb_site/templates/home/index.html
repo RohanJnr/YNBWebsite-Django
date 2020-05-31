@@ -1,5 +1,7 @@
 {% extends "home/base.html" %}
 {% load static %}
+{% load markdown_deux_tags %}
+
 {% block body %}
 
 <main>
@@ -20,15 +22,13 @@
             </div>
         </div>
         <div>
-            <iframe src="https://discordapp.com/widget?id=170334240490127367&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oJHlzhGmZTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
         </div>
 
     </div>
 </main>
 <section class="about">
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oJHlzhGmZTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
     <div class="party-poppers-div">
         <div>
             <img src="{% static 'images/party-popper.png' %}" alt="">
@@ -42,7 +42,7 @@
         <img src="{% static 'images/bear_ynb.png' %}" height="250px" width="auto" alt="">
     </div>
     <div>
-        <p>{{ section_1.description }}</p>
+        <p>{{ section_1.description|markdown }}</p>
     </div>
 </section>
 <div class="dolphin">
@@ -53,7 +53,7 @@
     <div>
         <img src="{% static 'images/mc_png.png' %}" height="200px" width="auto" alt="">
     </div>
-    <p>{{ section_2.description }}</p>
+    <p>{{ section_2.description|markdown }}</p>
     <a href="https://discord.gg/Ft4nrUA"><button class="invite-btn">Join Us</button></a>
 </section>
 {% endblock %}

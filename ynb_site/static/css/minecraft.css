@@ -1,7 +1,6 @@
 .mc-server{
     color: rgb(70, 70, 70);
     padding: 5%;
-    font-weight: 300;
 }
 
 .inner-container{
@@ -17,7 +16,7 @@
     padding: 20px 0;
 }
 .mc-server p{
-    font-size: 20px;
+    font-size: 18px;
 }
 .server-details{
     padding: 4% 0;
@@ -28,7 +27,7 @@
     font-size: 20px;
 }
 .server-details ul a{
-    color: orange;
+    color: orangered;
 }
 
 .s-detail p{

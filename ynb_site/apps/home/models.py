@@ -1,5 +1,7 @@
-from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models.signals import post_save
+
+from .signals import limit_instances
 
 
 class Game(models.Model):
@@ -16,11 +18,6 @@ class LandingPage(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        if LandingPage.objects.count() > 0:
-            raise ValidationError("There can only be 1 instance of this model.")
-        return super().save()
-
     class Meta:
         verbose_name = "LandingPageText"
         verbose_name_plural = "LandingPageText"
@@ -32,4 +29,6 @@ class HomePageSection(models.Model):
 
     def __str__(self):
         return self.title
-        
+
+
+post_save.connect(limit_instances, LandingPage)
