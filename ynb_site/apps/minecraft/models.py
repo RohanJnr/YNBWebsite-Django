@@ -17,6 +17,7 @@ class McServer(models.Model):
     features_description = models.TextField(null=True, blank=True)
     rules_description = models.TextField(null=True, blank=True)
     to_join_info = models.TextField(null=True, blank=True)
+    display = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
