@@ -1,9 +1,10 @@
 from django.urls import path
 
-from .views import DetailMcServer, ListMcServers
+from .views import DetailMcServer, ListMcServers, McStats
 
 
 urlpatterns = [
     path("minecraft", ListMcServers.as_view(), name="all_mc_servers"),
     path("minecraft/<str:server_name>", DetailMcServer.as_view(), name="mc_server"),
+    path("minecraft/stats", McStats.as_view(), name="mc_stats")
 ]

@@ -9,14 +9,21 @@
   font-size: 50px;
 }
 .images-container{
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
+  background-color: #D3CBB8;
+  margin: 5%;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.75);
+  border-radius: 5px;
 }
-.image-div img{
-  width: 100%;
-  height: auto;
+
+.images-container p{
+  font-family: 'Roboto', sans-serif;
+  margin: 30px;
+  text-align: left;
+  color: black;
+  font-size: 20px;
 }
 
 .list-albums{
@@ -34,6 +41,9 @@
 
 @media(max-width: 1100px){
   .images-container{
-    grid-template-columns: 1fr;
+    display: grid;
+  }
+  .images-container img{
+    width:100%;
   }
 }

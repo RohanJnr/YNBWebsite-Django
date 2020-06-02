@@ -5,14 +5,19 @@
 {% endblock %}
 {% block body %}
 <div class="gallery">
-<h1>Gallery</h1>
-<div class="images-container">
-  {% for pic in pictures %}
-  <div class="image-div">
-    <a href="{{ pic.image.url }}">
-      <img src="{{ pic.image.url }}" alt="">
-    </a>
-  </div>
-  {% endfor %}
+
+	<h1>Gallery</h1>
+	<h2>{{ album }}</h2>
+	{% for pic in pictures %}
+	<div class="images-container">
+		<a href="{{ pic.image.url }}"><img src="{{ pic.image.url }}"></a>
+		<div>
+			<p>Credits: <b>{{ pic.credits }}</b></p>
+			<p>{{ pic.title }}</p>				
+		</div>
+	</div>
+	{% endfor %}
+
+
 </div>
 {% endblock %}

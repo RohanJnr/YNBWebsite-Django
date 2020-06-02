@@ -32,3 +32,13 @@ class DetailMcServer(View):
             "server": mc_server_object
         }
         return render(request, template_name, context)
+
+
+class McStats(View):
+    """Show minecraft stats of specific players."""
+
+    def get(self, request):
+        """Handle get request."""
+        template_name = "minecraft/stats.html"
+        context = {}
+        return render(request, template_name, context)

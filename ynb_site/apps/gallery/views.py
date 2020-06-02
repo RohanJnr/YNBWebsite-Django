@@ -34,6 +34,7 @@ class McServerGallery(View):
         pictures = mc_server.picture_set.all()
         template_name = "gallery/mc_album.html"
         context  = {
-            "pictures": pictures
+            "pictures": pictures,
+            "album": mc_server.name
         }
         return render(request, template_name, context)
