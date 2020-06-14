@@ -11,6 +11,7 @@ SERVER_TYPES = (
 class McServer(models.Model):
     """Model for a minecraft server."""
     name = models.CharField(max_length=200, unique=True)
+    thumbnail = models.ImageField(upload_to="thmbnails", null=True, blank=True)
     founded_on = models.DateField()
     gamemode = models.CharField(max_length=200, choices=SERVER_TYPES, default="survival")
     description = models.TextField()

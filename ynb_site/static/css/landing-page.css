@@ -1,0 +1,144 @@
+.landing-page{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+    padding-top: 10%;
+    /* background: linear-gradient(45deg, white 0%, white 50%, rgb(255, 163, 163) 50%, rgb(255, 163, 163) 100%); */
+    background: url("../images/backgrounds/settlers.png");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 1px rgb(177, 177, 177) solid;
+}
+.landing-page h1{
+    font-size: 4rem;
+}
+.landing-page-description{
+    margin: 30px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #d4f3ef;
+}
+
+.games-info{
+    background: rgba(250, 242, 242, 0.6);
+}
+
+.games-info li{
+    list-style: none;
+    color: black;
+    padding: 20px;
+}
+
+.landing-page iframe{
+    border-radius: 10px;
+    border: 2px rgb(36, 29, 29) solid;
+}
+
+.landing-page a{
+    display: block;
+}
+
+.btn-join{
+    font-size: 1.8rem;
+    background: black;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: rgb(93, 93, 93) 2px solid;
+    color: rgb(255, 94, 94);
+
+}
+
+.btn-join .fa-discord{
+    color: rgb(255, 94, 94);
+}
+
+.btn-join a{
+}
+
+.btn-join a h3{
+    color: rgb(255, 94, 94);
+    display: inline-block;
+}
+
+.btn-join:hover{
+    cursor: pointer;
+    background: linear-gradient(135deg, black 0%, black 50%, rgb(90, 90, 90) 50%, rgb(90, 90, 90) 100%);
+}
+
+.section-1{
+    /* background: linear-gradient(45deg, #fabdbd, #fabdbd 50%, rgb(235, 229, 229) 50%, rgb(235, 229, 229)); */
+    background: linear-gradient(225deg, white 0%, white 50%, rgb(255, 163, 163) 50%, rgb(255, 163, 163) 100%);
+    text-align: center;
+    padding: 3%;
+    border-bottom: 1px rgb(177, 177, 177) solid;
+}
+
+.section-1 h1{
+    font-size: 3rem;
+}
+
+.section-1 .mc-image-div{
+    margin: 30px;
+}
+
+.section-1 p{
+    color: rgb(190, 190, 190);
+    font-size: 1.7rem;
+    padding: 10px 20%;
+    text-align: left;
+    color: black;
+
+}
+
+.section-2{
+    background: linear-gradient(45deg, rgb(29, 25, 25), rgb(29, 25, 25) 33%, black 33%, black 70%, rgb(29, 25, 25) 70%, rgb(29, 25, 25));
+    background-position: left;
+    text-align: center;
+    padding: 5%;
+}
+
+.section-2 .party-poppers-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-2 .party-poppers-div h2{
+    font-size: 2rem;
+}
+
+.section-2 p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 25%;
+    color: rgb(190, 190, 190);
+}
+
+::selection{
+    background: rgb(253, 114, 114);
+    color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 800px){
+    .landing-page{
+        padding-top: 110px;
+        flex-direction: column;
+        height: auto;
+    }
+    .landing-page h1{
+        font-size: 3rem;
+    }
+    .landing-page iframe{
+        max-width: 100%;
+    }
+    .section-1 p, .section-2 p{
+        padding: 10px;
+        font-size: 1.3rem;
+    }
+}

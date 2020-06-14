@@ -9,11 +9,11 @@ class ListMcServers(View):
 
     def get(self, request):
         """Handle get request."""
-        if McServer.objects.count() == 1:
-            server_name = McServer.objects.first().name
+        mc_servers = McServer.objects.filter(display=True)
+        if mc_servers.count() == 1:
+            server_name = mc_servers.first().name
             return redirect("mc_server", server_name=server_name)
 
-        mc_servers = McServer.objects.filter(display=True)
         template_name = "minecraft/list-servers.html"
         context = {
             "mc_servers": mc_servers
@@ -27,7 +27,7 @@ class DetailMcServer(View):
     def get(self, request, server_name):
         """Handle get request."""
         mc_server_object = get_object_or_404(McServer, name=server_name, display=True)
-        template_name = "minecraft/detail-server.html"
+        template_name = "minecraft/server-info.html"
         context = {
             "server": mc_server_object
         }

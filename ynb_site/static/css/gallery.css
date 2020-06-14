@@ -1,49 +1,57 @@
-/* body{
-  background: linear-gradient(to right, black, rgb(65, 65, 65));
-} */
-.gallery{
-  text-align: center;
+/* MC ALBUM PAGE */
+
+.gallery-head{
+  padding-top: 11%;
+  height: 60vh;
+  padding-left: 70px;
 }
-.gallery h1{
-  color: black;
-  font-size: 50px;
+
+.gallery-head h1{
+  font-size: 4rem;
+  margin-bottom: 30px;
 }
-.images-container{
-  background-color: #D3CBB8;
-  margin: 5%;
+
+.gallery-head h2{
+  color: white;
+  font-size: 3rem;
+}
+
+.image-container{
   display: flex;
-  -webkit-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.75);
+  margin: 5% 2%;
   border-radius: 5px;
+  background: #f3d8cd;
+
+  -webkit-box-shadow: 0px 0px 50px 13px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 50px 13px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 50px 13px rgba(0,0,0,0.5);
 }
 
-.images-container p{
-  font-family: 'Roboto', sans-serif;
-  margin: 30px;
-  text-align: left;
-  color: black;
-  font-size: 20px;
+.image-container .image-description{
+  font-size: 1.5rem;
+  padding: 50px;
 }
 
-.list-albums{
-  margin-top: 30px;
-  font-size: 20px;
+.image-container .image-description .credits{
+  margin-bottom: 30px;
 }
 
-.list-albums ol{
-  margin: 30px;
-  font-weight: bold;
-}
-.list-albums a{
-  color: orangered;
-}
-
-@media(max-width: 1100px){
-  .images-container{
-    display: grid;
+@media(max-width: 800px){
+  .gallery-head{
+    padding-top: 15%;
   }
-  .images-container img{
-    width:100%;
+  .image-container{
+    flex-direction: column;
+  }
+  .image-container img{
+    width: 100%;
+    height: auto;
+  }
+  .image-container .image-description{
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+  .image-container .image-description .credits{
+    margin-bottom: 10px;
   }
 }

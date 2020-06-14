@@ -1,0 +1,49 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% load markdown_deux_tags %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landing-page.css' %}">
+{% endblock %}
+{% block body %}
+<header class="landing-page">
+    <div>
+        <h1>{{ landing_text.title }}</h1>
+        <p class="landing-page-description">{{ landing_text.description }}</p>
+        <button type="button" class="btn-join landing-page-btn"><a href="https://discord.gg/Ft4nrUA">
+            <h3>Join</h3>
+            <i class="fab fa-discord"></i>
+            </a>
+        </button>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oJHlzhGmZTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</header>
+
+<section class="section-1">
+    <h1>{{ section_1.title }}</h1>
+    <div class="mc-image-div">
+        <img src="{% static 'images/mc_png.png' %}" height="200px" width="auto" alt="">
+    </div>
+    <p>{{ section_1.description|markdown }}</p>
+    <a href="https://discord.gg/Ft4nrUA"><button class="btn-join">Join Us</button></a>
+</section>
+
+<section class="section-2">
+    <div class="party-poppers-div">
+        <div>
+            <img class="popper-img" src="{% static 'images/party-popper.png' %}" alt="">
+        </div>
+        <h2>{{ section_2.title }}</h2>
+        <div>
+            <img class="popper-img" src="{% static 'images/party-popper-flip.png' %}" class="flip-image" alt="">
+        </div>
+    </div>
+    <div>
+        <img src="{% static 'images/bear_ynb.png' %}" height="250px" width="auto" alt="">
+    </div>
+    <div>
+        <p>{{ section_2.description|markdown }}</p>
+    </div>
+</section>
+{% endblock %}

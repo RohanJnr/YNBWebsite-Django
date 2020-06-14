@@ -5,14 +5,15 @@
 {% endblock %}
 {% block body %}
 <div class="gallery">
-
-	<h1>Gallery</h1>
-	<h2>{{ album }}</h2>
+<div class="gallery-head" style="background: url('{{ thumbnail.url }}')";>
+		<h1>Gallery</h1>
+		<h2>{{ album }}</h2>
+	</div>
 	{% for pic in pictures %}
-	<div class="images-container">
-		<a href="{{ pic.image.url }}"><img src="{{ pic.image.url }}"></a>
-		<div>
-			<p>Credits: <b>{{ pic.credits }}</b></p>
+	<div class="image-container">
+		<img src="{{ pic.image.url }}">
+		<div class="image-description">
+			<p class="credits">Credits: <b>{{ pic.credits }}</b></p>
 			<p>{{ pic.title }}</p>				
 		</div>
 	</div>

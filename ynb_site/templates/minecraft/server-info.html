@@ -1,0 +1,49 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% load markdown_deux_tags %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/minecraft.css' %}">
+{% endblock %}
+{% block body %}
+    <div class="headings" style="background: url('{{ server.thumbnail.url }}');">
+            <h1>{{ server.name }}</h1>
+            <h5 class="text-muted">Created on: {{ server.founded_on }}</h5>
+            <h5 class="text-muted">Gamemode: {{ server.gamemode.capitalize }}</h5>
+
+            <h2>{{ server.description }}</h2>
+    </div>
+
+    <div class="server-detail howtojoin">
+        <h2>How to join?</h2>
+        <div class="detail-points">
+            <p>{{ server.to_join_info|markdown }}</p>
+        </div>
+    </div>
+    <div class="server-detail features">
+        <h2>Features</h2>
+        <div class="detail-description">
+            <p>{{ server.features_description|markdown }}</p>
+        </div>
+        <div class="detail-points">
+            <ul class="points">
+                {% for feature in server.serverfeature_set.all %}
+                    <li> <span class="detail-title"><b>{{ feature.title }}:</b></span> <br> {{ feature.feature|markdown }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="server-detail howtojoin">
+        <h2>Rules</h2>
+        <div class="detail-description">
+            <p>{{ server.rules_description|markdown }}</p>
+        </div>
+        <div class="detail-points">
+            <ul class="points">
+                {% for rule in server.serverrule_set.all %}
+                    <li> <span class="detail-title"><b>{{ rule.title }}:</b></span> <br> {{ rule.rule|markdown }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
