@@ -84,7 +84,7 @@
     margin: 30px;
 }
 
-.section-1 p{
+.section-1 .section-1-markdown{
     color: rgb(190, 190, 190);
     font-size: 1.7rem;
     padding: 10px 20%;
@@ -111,7 +111,7 @@
     font-size: 2rem;
 }
 
-.section-2 p{
+.section-2 .section-2-markdown{
     font-family: 'Oswald', sans-serif;
     font-size: 1.7rem;
     font-weight: bold;
@@ -125,19 +125,19 @@
 }
 
 
-@media (max-width: 800px){
+@media only screen and (max-width: 800px){
     .landing-page{
         padding-top: 110px;
         flex-direction: column;
         height: auto;
     }
     .landing-page h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .landing-page iframe{
         max-width: 100%;
     }
-    .section-1 p, .section-2 p{
+    .section-1 .section-1-markdown, .section-2 .section-2-markdown{
         padding: 10px;
         font-size: 1.3rem;
     }

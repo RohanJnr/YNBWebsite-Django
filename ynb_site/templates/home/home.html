@@ -25,7 +25,9 @@
     <div class="mc-image-div">
         <img src="{% static 'images/mc_png.png' %}" height="200px" width="auto" alt="">
     </div>
-    <p>{{ section_1.description|markdown }}</p>
+    <div class="section-1-markdown">
+        <p>{{ section_1.description|markdown }}</p>
+    </div>
     <a href="https://discord.gg/Ft4nrUA"><button class="btn-join">Join Us</button></a>
 </section>
 
@@ -42,7 +44,7 @@
     <div>
         <img src="{% static 'images/bear_ynb.png' %}" height="250px" width="auto" alt="">
     </div>
-    <div>
+    <div class="section-2-markdown">
         <p>{{ section_2.description|markdown }}</p>
     </div>
 </section>
