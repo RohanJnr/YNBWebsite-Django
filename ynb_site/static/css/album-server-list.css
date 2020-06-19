@@ -1,0 +1,31 @@
+/* NAVBAR */
+.navbar{
+    background: rgb(41, 41, 41);
+}
+
+/* LIST GALLERY PAGE */
+.list-albums{
+    font-size: 20px;
+  }
+  
+  .list-albums ol{
+    margin: 30px;
+    font-weight: bold;
+  }
+  .list-albums a{
+    color: orangered;
+  }
+  
+/* LIST SERVERS PAGE */
+
+.list-servers{
+    font-size: 20px;
+}
+
+.list-servers ol{
+    font-weight: bold;
+    margin: 30px;
+}
+.list-servers a{
+    color: orangered;
+}

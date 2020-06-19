@@ -16,5 +16,5 @@ class Home(View):
             "section_1": section_1,
             "section_2": section_2
         }
-        template_name = "home/index.html"
+        template_name = "home/home.html"
         return render(request, template_name, context)

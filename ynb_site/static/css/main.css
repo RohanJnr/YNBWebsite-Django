@@ -1,208 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+
 @font-face {
-	font-family: 'lovelyFont';
+	font-family: 'YNB-special-font';
     src: url("../fonts/Manufaktur_Bold2.otf");
 } 
-
 *{
-    padding: 0;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
-html{
-    scroll-behavior: smooth;
-}
-body{
-    opacity: 0;
-    line-height: 3rem;
-    transition: opacity 2s;
-    -webkit-transition: opacity 2s; /* Safari */
-    background: linear-gradient(to right, #ffffff, #abbaab); 
-    font-family: 'Roboto', sans-serif;
-    color: black;
 
+:root{
+    
+    --nav-background: rgba(177, 177, 177, 0.7);
+    --footer-background: rgb(41, 41, 41);
+    --heading-color: red;
 }
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 2.8rem;
+    background: rgb(240, 235, 231);
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding-top: 12%;
+}
+
 h1, h2, h3, h4, h5, h6{
-    color: red;
-    /* font-family: 'Metal Mania', cursive; */
-    font-family: lovelyFont;
+    font-family: 'YNB-special-font', sans-serif;
+    color: var(--heading-color);
 }
 
 a{
     text-decoration: none;
-}
-nav a{
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(226, 226, 226) !important;
-    margin: 0;
-    padding: 0;
-}
-.nav-link{
-    padding: 5px;
-}
-.nav-link:hover{
-    background: #000;
-}
-.navbar-text i{
-    font-size: 30px;
-}
-.site-footer
-{
-    position: relative;
-    bottom: 0;
-        background-color:#26272b;
-    padding:25px 25%;
-    color:#737373;
-    text-align: center;
-    height: 100%;
-}
-a:hover{
-    text-decoration: none;
-}
-main {
-    color: orange;
-    font-weight: bold;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4%;
-    font-family: 'Metal Mania', cursive;
-}
-main .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-main iframe{
-    margin-left: 20px;
+    display: inline-block;
+    color: rgb(0, 132, 255);
 }
 
-main h1{
-    font-size: 80px;
-    color: red;
-}
-main h2{
-    color: orange;
-}
-main .landing-page-img{
-    padding-left: 100px;
-}
-
-.invite-btn{
-    overflow: hidden;
-    max-width:20em;
-    font-family: 'Metal Mania', cursive;
-    background: black;
-    color: white;
-    padding: 10px;
-    font-size: 30px;
-    border-color:rgb(77, 75, 75);
-    border-radius: 5px;
-    transition-duration: 0.5s;
-}
-.fa-discord{
-    color: rgb(255, 255, 255);
-    padding: 5px;
-}
-.invite-btn:hover{
-    color: orange;
-}
-section{
-    text-align: center;
-    color: white;
-    padding: 3% 5%;
-}
-section iframe{
-    border-radius: 5px;
-    border: rgb(44, 44, 44) 1px solid;
-}
-.about{
-    background: url("../images/minecraft_background3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom right;
-}
-.about h2{
-    color: orangered;
-    font-size: 50px;
-}
-.flip-image{
-    transform: rotateY(180deg);
-}
-.party-poppers-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-section p{
-    margin: 10px;
-    padding: 10px 20%;
-    font-size: 22px;
-}
-.offering h2{
-    color: orangered;
-    font-size: 50px;
-}
-.offering p{
-    color: black;
-    text-align: left;
-}
-.dolphin{
-    margin-left: 60px;
+.navbar{
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15%;
+    left: 0;
+    right: 0;
+    background: var(--nav-background);
 }
-@media (max-width: 1100px) {
-    main .container {
-        padding: 0;
-        grid-template-columns: 1fr;
-        max-width: 100%;
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar li{
+    margin: 5px;
+    list-style: none;
+}
+
+.navbar a{
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.nav-right li{
+    margin-top: 10px;
+}
+
+.nav-right a{
+    font-size: 2rem;
+    padding: 5px 15px;
+}
+
+.navbar a:hover{
+    border-radius: 30px;
+    background: rgba(243, 225, 225, 0.1);
+    color: orange;
+}
+.navbar .hamburger-menu{
+    display: none;
+}
+.navbar .hamburger-menu *{
+    background: white;
+    height: 5px;
+    width: 30px;
+    margin: 3px;
+    transition: "margin" 1s;
+}
+
+.navbar .hamburger-menu:hover{
+    cursor: pointer;
+}
+
+.site-footer{
+    text-align: center;
+    background: var(--footer-background);
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+
+@media(max-width: 800px){
+    .navbar{
+        padding: 10px;
+        flex-direction: column;
+        background-color: rgba(177, 177, 177, 1);
     }
-    iframe{
-        margin-top: 20px;
-        margin-left: 0px !important;
-        max-width: 100%;
+    .navbar .hamburger-menu{
+        display: block;
     }
-    main .landing-page-img{
-        padding-left: 0;
-    }
-    section p{
-        padding: 0;
-        max-width: 100%;
-    }
-    .dolphin{
+    .nav-right{
+        transition: 1s;
         display: none;
     }
-    .about h2{
-        font-size: 35px;
+    .nav-left{
+        transition: 1s;
+        display: none;
     }
-    footer .links-container{
-        display: grid;
-        grid-gap: 10px;
+    .nav-right.expanded,
+    .nav-left.expanded{
+    display: block;
     }
-    .about p{
-        padding-bottom: 100px;
-    }
-  }
+}
 
-.in-progress{
-    padding: 20px;
-    background-color: rgb(226, 226, 226);
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-}
-.right-side{
-    margin: 0 10px;
-}
-.right-side:hover{
-    filter:brightness(80%);
-}
-.discord-logo{
-    padding-top: 5px;
-    max-width: 55px;
-    background: #7289DA;
-    border-radius: 3px;
-}
-                                                                                                        

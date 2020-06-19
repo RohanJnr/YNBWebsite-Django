@@ -11,12 +11,14 @@ SERVER_TYPES = (
 class McServer(models.Model):
     """Model for a minecraft server."""
     name = models.CharField(max_length=200, unique=True)
+    thumbnail = models.ImageField(upload_to="thmbnails", null=True, blank=True)
     founded_on = models.DateField()
     gamemode = models.CharField(max_length=200, choices=SERVER_TYPES, default="survival")
     description = models.TextField()
     features_description = models.TextField(null=True, blank=True)
     rules_description = models.TextField(null=True, blank=True)
     to_join_info = models.TextField(null=True, blank=True)
+    display = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name

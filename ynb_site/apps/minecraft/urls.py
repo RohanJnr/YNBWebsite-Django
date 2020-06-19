@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import DetailMcServer, ListMcServers
+from .views import DetailMcServer, ListMcServers, McStats
 
 
 urlpatterns = [

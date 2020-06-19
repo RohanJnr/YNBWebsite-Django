@@ -1,39 +1,94 @@
-/* body{
-  background: linear-gradient(to right, black, rgb(65, 65, 65));
-} */
-.gallery{
-  text-align: center;
-}
-.gallery h1{
-  color: black;
-  font-size: 50px;
-}
-.images-container{
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-}
-.image-div img{
-  width: 100%;
-  height: auto;
+/* MC ALBUM PAGE */
+
+.gallery-head{
+  padding-top: 11%;
+  height: 60vh;
+  padding-left: 70px;
 }
 
-.list-albums{
-  margin-top: 30px;
-  font-size: 20px;
+.gallery-head h1{
+  font-size: 4rem;
+  margin-bottom: 30px;
 }
 
-.list-albums ol{
-  margin: 30px;
+.gallery-head h2{
+  color: white;
+  font-size: 3rem;
+}
+
+.list-categories{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  margin: 20px 10%;
+  color: rgb(218, 80, 31);
   font-weight: bold;
 }
-.list-albums a{
-  color: orangered;
+
+.list-categories .category{
+  border: orange 2px solid;
+  padding: 20px;
 }
 
-@media(max-width: 1100px){
-  .images-container{
-    grid-template-columns: 1fr;
+.list-categories .category:hover{
+  background: linear-gradient(135deg, transparent, transparent 50% , rgb(58, 58, 58) 50%, rgb(34, 34, 34));
+  cursor: pointer;
+}
+
+.image-container{
+  display: flex;
+  margin: 5% 2%;
+  border-radius: 5px;
+  background: #f3d8cd;
+
+  -webkit-box-shadow: 0px 0px 50px 13px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 50px 13px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 50px 13px rgba(0,0,0,0.5);
+}
+
+.image-container .image-description{
+  font-size: 1.5rem;
+  padding: 50px;
+}
+
+.image-container .image-description .credits{
+  margin-bottom: 30px;
+}
+
+
+.list-categories .category.active{
+  background: linear-gradient(45deg, rgb(58, 58, 58) 50%, rgb(34, 34, 34));
+}
+
+.category-images{
+  display: none;
+}
+
+.category-images.active{
+  display: block;
+}
+
+
+@media(max-width: 800px){
+  .gallery-head{
+    padding-top: 15%;
+  }
+  .image-container{
+    flex-direction: column;
+  }
+  .image-container img{
+    width: 100%;
+    height: auto;
+  }
+  .image-container .image-description{
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+  .image-container .image-description .credits{
+    margin-bottom: 10px;
+  }
+  .list-categories{
+    flex-direction: column;
+    font-size: 1.5rem;
   }
 }

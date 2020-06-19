@@ -1,67 +1,70 @@
-.mc-server{
-    color: rgb(70, 70, 70);
-    padding: 5%;
+.headings{
+    padding-top: 11%;
+    padding-left: 70px;
+    padding-bottom: 30px;
 }
 
-.inner-container{
-    margin-left: 30px;
-    padding-left: 20px;
-    border-left: rgb(214, 214, 214) 1px solid;
-}
-.inner-container hr{
-    background-color: brown;
-}
-.server-name{
-    font-size: 60px;
-    padding: 20px 0;
-}
-.mc-server p{
-    font-size: 18px;
-}
-.server-details{
-    padding: 4% 0;
+.headings h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
-.server-details ul{
-    padding-left: 5%;
-    font-size: 20px;
-}
-.server-details ul a{
-    color: orangered;
+.headings h2{
+    font-size: 1.7rem;
+    color: white;
 }
 
-.s-detail p{
-    padding: 15px;
+.headings h5{
+    color: rgb(0, 255, 149);
+    font-size: 1rem;
 }
 
-.points{
+.server-detail{
+    border-radius: 2px;
+    margin: 60px;
+    padding: 40px;
+    -webkit-box-shadow: 0px 0px 54px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 54px 15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 54px 15px rgba(0,0,0,0.75);
+    background: linear-gradient(45deg, #DAE2F8, #DAE2F8 50%, #D6A4A4 50%, #D6A4A4);
+}
+
+.server-detail h2{
+    font-size: 2rem;
+}
+
+.server-detail .detail-description{
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.server-detail .detail-points {
+    margin-top: 20px;
     padding-left: 60px;
-}
-.detail-title{
-    color: orangered;
-    font-size: 20px;
-}
-li{
-    margin: 10px;
-}
-.list-servers{
-    margin-top: 30px;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
-.list-servers ol{
-    font-weight: bold;
-    margin: 30px;
+.server-detail li{
+    margin: 30px 0;
 }
-.list-servers a{
-    color: orangered;
-}
-.creeper-div{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-}
-@media (max-width: 1100px) {
-    .creeper-div{
-        grid-template-columns: 1fr;
+
+@media (max-width: 800px){
+    .headings{
+        padding-top: 13%;
+        padding-left: 0;
+        padding-bottom: 30px;
+        text-align: center;
     }
-  }
+    .headings h1{
+        font-size: 3rem;
+    }
+    .headings h2{
+        font-size: 1.5rem;
+    }
+    .server-detail{
+        border-radius: 2px;
+        margin: 0px;
+        padding: 10px;
+        box-shadow: none;
+    }
+}
