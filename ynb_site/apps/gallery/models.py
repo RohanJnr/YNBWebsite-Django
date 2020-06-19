@@ -21,7 +21,7 @@ class Category(models.Model):
 
 class Picture(models.Model):
 	minecraft_server = models.ForeignKey(McServer, on_delete=models.CASCADE, default=1)
-	# category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
+	category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
 	created_at = models.DateTimeField(auto_now_add=True)
 	title = models.CharField(max_length=200, default="pic")
 	credits = models.CharField(max_length=200, help_text="Use commas if multiple.")
