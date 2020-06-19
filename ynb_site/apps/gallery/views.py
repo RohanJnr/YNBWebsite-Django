@@ -54,7 +54,7 @@ class McServerGallery(View):
         for category in Category.objects.all():
             category_images = category.picture_set.all().filter(minecraft_server = mc_server)
             if category_images:
-                categories.append(category)
+                categories.append(category.name)
                 all_pictures[category.name] = category_images
 
         thumbnail = mc_server.thumbnail

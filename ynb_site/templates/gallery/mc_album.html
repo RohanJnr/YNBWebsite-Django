@@ -9,16 +9,25 @@
 		<h1>Gallery</h1>
 		<h2>{{ album }}</h2>
 	</div>
-	{% for pic in pictures %}
-	<div class="image-container">
-		<img src="{{ pic.image.url }}">
-		<div class="image-description">
-			<p class="credits">Credits: <b>{{ pic.credits }}</b></p>
-			<p>{{ pic.title }}</p>				
-		</div>
+	<div class="list-categories">
+		{% for category in categories %}
+			<div class="category" id="{{ category }}">{{ category }}</div>
+		{% endfor %}
 	</div>
+
+	{% for category, pictures in all_pictures.items %}
+		<div class="category-images {{ category }}">
+			{% for pic in pictures %}
+				<div class="image-container">
+					<img src="{{ pic.image.url }}">
+					<div class="image-description">
+						<p class="credits">Credits: <b>{{ pic.credits }}</b></p>
+						<p>{{ pic.title }}</p>				
+					</div>
+				</div>
+			{% endfor %}
+		</div>
 	{% endfor %}
-
-
 </div>
+
 {% endblock %}
