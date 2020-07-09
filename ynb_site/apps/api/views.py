@@ -27,7 +27,7 @@ class YtPushNotification(APIView):
 
 		for entry in root.findall('xmlns:entry', namespaces=namespaces):
 			link = entry.find('xmlns:link', namespaces=namespaces).get('href')
-
+		print(link)
 		self.notify_discord(link)
 			
 		return Response("Received", status=status.HTTP_200_OK)
@@ -43,7 +43,7 @@ class YtPushNotification(APIView):
 		url = os.getenv("YT_DISCORD_WEBHOOK")
 
 		data = {}
-		data["content"] = "New youtube Vid!\nhttps://www.youtube.com/watch?v=gNW-KNgBO3o"
+		data["content"] = f"New youtube Vid!\n{link}"
 		data["username"] = "IceBot"
 
 		r = requests.post(url, data=json.dumps(data), headers={"Content-Type": "application/json"})
