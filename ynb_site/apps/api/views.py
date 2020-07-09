@@ -14,3 +14,9 @@ class YtPushNotification(APIView):
 		data = request.data
 		print(data)
 		return Response("Received", status=status.HTTP_202_ACCEPTED)
+
+	def get(self, request):
+		"""Handle get request."""
+		data = request.query_params
+		print(data)
+		return Response("Received", status=status.HTTP_202_ACCEPTED)
