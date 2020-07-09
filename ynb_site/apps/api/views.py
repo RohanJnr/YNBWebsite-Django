@@ -16,7 +16,7 @@ class YtPushNotification(APIView):
 		return Response("Received", status=status.HTTP_202_ACCEPTED)
 
 	def get(self, request):
-		"""Handle get request."""
-		data = request.query_params
-		print(data)
-		return Response("Received", status=status.HTTP_202_ACCEPTED)
+		"""Verify youtube subscription"""
+		hub_challenge = request.query_params["hub.challenge"][0]
+		print(hub_challenge)
+		return Response(hub_challenge)
