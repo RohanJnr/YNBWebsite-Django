@@ -32,7 +32,8 @@ ALLOWED_HOSTS = ["localhost", os.getenv("SERVER_IP"), "youneedbackup.com", "www.
 # Application definition
 
 INSTALLED_APPS = [
-    "markdown_deux",
+    'rest_framework_xml',
+    'markdown_deux',
     'rest_framework',
     "ynb_site.apps.api",
     "ynb_site.apps.gallery",
@@ -45,6 +46,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework_xml.parsers.XMLParser',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework_xml.renderers.XMLRenderer',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
