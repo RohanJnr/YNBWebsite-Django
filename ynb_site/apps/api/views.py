@@ -17,6 +17,6 @@ class YtPushNotification(APIView):
 
 	def get(self, request):
 		"""Verify youtube subscription"""
-		hub_challenge = request.query_params["hub.challenge"][0]
+		hub_challenge = request.query_params["hub.challenge"]
 		print(hub_challenge)
 		return Response(hub_challenge)
