@@ -26,6 +26,7 @@ urlpatterns = [
     path("", include("ynb_site.apps.home.urls")),
     path("", include("ynb_site.apps.minecraft.urls")),
     path("", include("ynb_site.apps.gallery.urls")),
+    path("", include("ynb_site.apps.api.urls")),
 ]
 
 if settings.DEBUG:

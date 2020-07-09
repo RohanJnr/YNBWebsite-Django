@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ["localhost", os.getenv("SERVER_IP"), "youneedbackup.com", "www.
 
 INSTALLED_APPS = [
     "markdown_deux",
+    'rest_framework',
+    "ynb_site.apps.api",
     "ynb_site.apps.gallery",
     "ynb_site.apps.home",
     "ynb_site.apps.minecraft",

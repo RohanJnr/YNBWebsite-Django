@@ -11,6 +11,9 @@ pillow = "*"
 python-dotenv = "*"
 gunicorn = "*"
 django-markdown-deux = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.8"
