@@ -9,7 +9,7 @@ from rest_framework import status
 class YtPushNotification(APIView):
 	"""Youtube push notification callback url."""
 
-	def post(self, request):
+	def post(self, request, format=None):
 		"""post request."""
 		data = request.data
 		print(data)
@@ -19,4 +19,4 @@ class YtPushNotification(APIView):
 		"""Verify youtube subscription"""
 		hub_challenge = request.query_params["hub.challenge"]
 		print(hub_challenge)
-		return Response(hub_challenge, status=status.HTTP_200_OK)
+		return Response(int(hub_challenge), status=status.HTTP_200_OK)
