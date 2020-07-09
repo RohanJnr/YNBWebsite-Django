@@ -15,6 +15,7 @@ djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
 djangorestframework-xml = "*"
+defusedxml = "*"
 
 [requires]
 python_version = "3.8"

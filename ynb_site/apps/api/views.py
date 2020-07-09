@@ -4,6 +4,13 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+import defusedxml.ElementTree as XML
+
+
+namespaces = {
+	'yt': 'http://www.youtube.com/xml/schemas/2015',
+	'xmlns': 'http://www.w3.org/2005/Atom'
+}
 
 
 class YtPushNotification(APIView):
@@ -11,8 +18,14 @@ class YtPushNotification(APIView):
 
 	def post(self, request, format=None):
 		"""post request."""
-		data = request.data
-		print(data)
+		response = request.body.decode('utf-8')
+		root = XML.fromstring(response)
+
+		for entry in root.findall('xmlns:entry', namespaces=namespaces):
+			link = entry.find('xmlns:link', namespaces=namespaces).get('href')
+
+		print(link)
+			
 		return Response("Received", status=status.HTTP_200_OK)
 
 	def get(self, request):
