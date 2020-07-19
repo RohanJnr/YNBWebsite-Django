@@ -2,8 +2,12 @@
 {% load static %}
 <html>
 <head>
-    <title>YNB - Site</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A website for YNB minecraft community.">
+    <title>You Need Backup - YNB Gaming Community.</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="gaming, minecraft">
+    <meta name="author" content="Rohan Reddy Alleti">
 	<script src="https://kit.fontawesome.com/7b277203c6.js"\></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 	{% block head %}
@@ -12,26 +16,26 @@
 </head>
 <body>
 	<nav class="navbar">
-            <div class="hamburger-menu" id="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="nav-left" id="nav-left">
-                <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                    <li><a href="{% url 'all_mc_servers' %}">Minecraft</a></li>
-                    <li><a href="https://www.patreon.com/youneedbackup">Patreon</a></li>
-                </ul>
-            </div>
-            <div class="nav-right" id="nav-right">
-                <ul>
-                    <li><a href="https://discord.gg/Ft4nrUA"><i class="fab fa-discord"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCJjm2A_-hssJLkp0ZQUGIxQ"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-left" id="nav-left">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'all_mc_servers' %}">Minecraft</a></li>
+                <li><a href="https://www.patreon.com/youneedbackup">Patreon</a></li>
+            </ul>
+        </div>
+        <div class="nav-right" id="nav-right">
+            <ul>
+                <li><a href="https://discord.gg/Ft4nrUA"><i class="fab fa-discord"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCJjm2A_-hssJLkp0ZQUGIxQ"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </nav>
 	{% block body %}
 	{% endblock body %}
 	<footer class="site-footer">
